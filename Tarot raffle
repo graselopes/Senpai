@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void) {
+
+	int escolha;
+
+	printf("Digite o número da opção que deseja:\n");
+	printf("1 - Escolher carta do arcano maior.\n");
+	printf("2 - Escolher carta do arcano menor.\n");
+	scanf("%d", &escolha);
+	srand (time(NULL));
+
+	switch (escolha) {
+
+	case 1:
+		printf(" \n Opção: 1. Arcanos maiores \n");
+			char maiores [22][16]= {"louco","mago","papisa","imperatriz","imperador","papa","amantes","carro","força","eremita","roda_da_fortuna","justiça","enforcado", "morte","temperança","diabo","torre","estrela","lua","sol","julgamento","mundo"};
+			printf ("%s \n", maiores [rand()%22]);
+		        break;
+	case 2:
+		printf(" \n Opção: 2. Arcanos menores \n");
+			char corte [14][10]= {"A","2","3","4","5","6","7","8","9","10","pajem","rei","rainha","cavaleiro"};
+			char menores [4][8]= {"espadas", "ouros", "copas", "paus"};
+			printf ("%s de %s \n", corte[rand()%4], menores [rand()%4]);
+				break;
+    }
+	getchar();
+return main();
+}
